@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+/*--------------------
+リセットCSS
+---------------------*/
+*,*::before,*::after{box-sizing:border-box}html{-moz-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role='list'],ol[role='list']{list-style:none}body{min-height:100vh;line-height:1.5}h1,h2,h3,h4,button,input,label{line-height:1.1}h1,h2,h3,h4{text-wrap:balance}a:not([class]){text-decoration-skip-ink:auto;color:currentColor}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}textarea:not([rows]){min-height:10em}:target{scroll-margin-block:5ex}
+
+/*--------------------
+全体設定
+---------------------*/
+body{
+    background-color:white;
+    margin:auto, 0;
+}
+
+.wrapper{
+    max-width:960px;
+    margin:0 auto;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.inner_wrapper{
+    max-width:800px;
+    margin:0 auto;
+}
+
+.center{
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    padding:30px 0;
+    margin:auto;
+    background-color:rgb(248, 144, 99);
+}
+
+form{
+    margin-bottom:0;
+}
+
+.cf{
+    clear:both;
+}
+
+/*-------------------
+ボタン
+--------------------*/
+.btn_reply{
+    float:right;
+    background-color:rgb(248, 144, 99);
+    border:none;
+}
+
+/*--------------------
+フォーム
+---------------------*/
+label,
+input{
+    display:table-cell;
+    margin-bottom:10px;
+}
+
+label{
+    padding-right:10px;
+}
+/*--------------------
+ログイン画面　会員登録画面 ユーザー情報
+----------------------*/
+.login
+{
+    height:250px;
+}
+
+.login h2,
+.register h2{
+    margin-bottom:20px;
+}
+
+form.login_form,
+form.register_form{
+    display: table;
+}
+
+div.login_form,
+div.register_form{
+    display:table-row;
+}
+
+/*-------------------
+会員登録画面
+--------------------*/
+.register{
+    height:320px;
+}
+/*-------------------
+ヘッダー
+--------------------*/
+header{
+    padding:10px 10px;
+    max-width:960px;
+    background-color:rgb(248, 144, 99);
+    margin:auto, 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/*---------------------
+なまえさん、ようこそ
+----------------------*/
+.hello{
+    padding:10px;
+    background-color:rgb(251, 244, 236);
+}
+
+.tweet_area{
+    width:100%;
+}
+
+/*---------------------
+ツイートされた内容 返信内容
+----------------------*/
+.replys,
+.tweets{
+    padding:10px 10px;    
+    background-color:bisque;
+}
+
+.replys h2,
+.tweets h2{
+    margin-bottom:15px;
+}
+
+.reply,
+.post{
+    background-color:white;
+    margin-bottom:10px;
+    border-radius:5px;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.4);
+}
+
+.reply dl,
+.post dl{
+    width:100%;
+}
+
+.reply dt,
+.post dt{
+    width:100%;
+}
+
+.reply dd,
+.post dd{
+    margin:0 auto;
+    width:90%;
+}
+
+/*------------------
+返信内容
+-------------------*/
+.anypost{
+    background-color:white;
+    margin-bottom:10px;
+    border-radius:5px;
+}
+
+.anypost dl{
+    width:100%;
+}
+
+.anypost dt{
+    width:100%;
+}
+
+.anypost dd{
+    margin:0 auto;
+    width:90%;
+}
+/*------------------
+ユーザー情報
+------------------*/
+.user_info,
+.exchange_info{
+    padding:0 50px;
+}
+
+.user_info{
+    margin:30px auto;
+}
+
+.user_info h2,
+.exchange_info h2{
+    margin-bottom:10px;
+}
+
+.user_info dl{
+    width:70%;
+}
+
+.user_info dt{
+    width:30%;
+    float:left;
+    line-height:2rem;
+}
+
+.user_info dd{
+    width:70%;
+    float:left;
+    line-height:2rem;
+}
+
