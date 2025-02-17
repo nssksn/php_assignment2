@@ -57,7 +57,8 @@ if(!empty($tweet_user[0]["id"]))
     $replys->execute([$tweet_user[0]["id"]]);
     $replys = $replys->fetchall();
 
-    arsort($replys);
+
+    $replys = array_reverse($replys);
 }else{
     echo "データが入っていません";
 }

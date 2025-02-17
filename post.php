@@ -12,7 +12,7 @@ session_start();
 
 require "db_connection.php";
 
-//ログインしtクァユーザー情報を取得
+//ログインしたユーザー情報を取得
 if(isset($_SESSION["id"]))
 {
     $sql = "SELECT * FROM users WHERE id=?";
@@ -44,7 +44,7 @@ if(isset($params["email"])){
 */
 
 //ログインしたユーザーが投稿した情報をデータベースに登録する
-if(!empty($_POST["post"]))
+if(!empty($_POST["post"]) && !empty($_POST["tweet"]))
 {
     $sql = "INSERT INTO tweets (user_id, tweet)VALUE(" . $member[0]["id"] . ", ?)";
     $my_post = $pdo->prepare($sql);
@@ -57,7 +57,7 @@ $sql = "SELECT u.first_name, u.last_name, t.* FROM tweets t JOIN users u ON t.us
 $posts = $pdo->query($sql);
 $posts = $posts->fetchall();
 
-arsort($posts);
+$posts = array_reverse($posts);
 
 ?>
 
